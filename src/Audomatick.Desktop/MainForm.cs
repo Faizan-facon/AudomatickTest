@@ -51,7 +51,7 @@ public sealed class MainForm : Form
     public MainForm()
     {
         // Initialize services
-        var httpClient = new HttpClient { BaseAddress = new Uri("http://localhost:5000") };
+        var httpClient = new HttpClient { BaseAddress = new Uri("http://localhost:5151") };
         _releaseClient = new ReleasePolicyClient(httpClient, _appId, _appVersion);
         _velopackCoordinator = new VelopackCoordinator(_releaseClient);
         _offlineCache = new OfflineLimitCache();
@@ -59,7 +59,7 @@ public sealed class MainForm : Form
 
         var enforcementOptions = Options.Create(new FaconEnforcementOptions
         {
-            ControlPlaneUrl = "http://localhost:5000",
+            ControlPlaneUrl = "http://localhost:5151",
             FailClosedForHardLimits = false
         });
 
