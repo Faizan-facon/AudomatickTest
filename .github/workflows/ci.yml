@@ -5,6 +5,16 @@ on:
     branches: [ main, feature/* ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      correlation_key:
+        description: 'FACON build correlation key'
+        required: false
+        default: ''
+      commit_sha:
+        description: 'Commit SHA'
+        required: false
+        default: 'HEAD'
 
 jobs:
   build-and-test:
