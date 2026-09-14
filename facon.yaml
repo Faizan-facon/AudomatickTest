@@ -1,0 +1,41 @@
+schemaVersion: "1.0"
+name: "audomatick-desktop"
+applicationId: "a1b2c3d4-e5f6-4a0b-8c1d-2e3f4a5b6c7d"
+type: "desktop"
+probes:
+  liveness:
+    path: "/health/live"
+    port: 0
+    initialDelaySeconds: 0
+    periodSeconds: 0
+    timeoutSeconds: 0
+  readiness:
+    path: "/health/ready"
+    port: 0
+    initialDelaySeconds: 0
+    periodSeconds: 0
+    timeoutSeconds: 0
+metadata:
+  endpoint: "/.well-known/facon"
+  packaging: "velopack"
+  velopackVersion: "1.2.0"
+  supportedChannels:
+    - "stable"
+    - "beta"
+    - "canary"
+resources: []
+telemetry:
+  serviceName: "audomatick-desktop"
+  tracingEnabled: true
+  metricsEnabled: false
+limits:
+  - key: "audomatick.tasks.processed.daily"
+    measurementKind: "Counter"
+    aggregationPeriod: "Day"
+    enforcementMode: "Soft"
+    description: "Daily count of automated tasks processed by Audomatick Desktop"
+  - key: "sessions.active"
+    measurementKind: "Gauge"
+    aggregationPeriod: "None"
+    enforcementMode: "Soft"
+    description: "Concurrent active Audomatick Desktop client sessions"

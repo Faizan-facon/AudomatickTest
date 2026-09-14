@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FaconControlPlane.DataPlane.Contracts/FaconControlPlane.DataPlane.Contracts.csproj" />
+    <Project Path="src/Audomatick.Desktop/Audomatick.Desktop.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Audomatick.Desktop.Tests/Audomatick.Desktop.Tests.csproj" />
+  </Folder>
+</Solution>

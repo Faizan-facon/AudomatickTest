@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+
+    <!-- Package identity -->
+    <PackageId>FaconControlPlane.DataPlane.Contracts</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Faizan-facon</Authors>
+    <Company>FACON</Company>
+    <Product>Facon Control Plane</Product>
+    <Description>Data-Plane runtime contract specification v1, health probes (/health/live, /health/ready), runtime metadata (/.well-known/facon), zero-secret binding loader, and telemetry enrichers for FACON applications.</Description>
+    <PackageTags>facon;controlplane;dataplane;contract;health;telemetry</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="YamlDotNet" Version="16.3.0" />
+    <PackageReference Include="OpenTelemetry.Api" Version="1.15.3" />
+  </ItemGroup>
+
+</Project>

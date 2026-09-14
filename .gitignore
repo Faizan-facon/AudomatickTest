@@ -1,0 +1,26 @@
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build Results
+bin/
+obj/
+artifacts/
+publish/
+releases/
+*.nupkg
+*.snupkg
+
+# Velopack / Squirrel
+Release/
+releases.win.json
+assets.win.json
+RELEASES
+
+# OS files
+.DS_Store
+Thumbs.db
