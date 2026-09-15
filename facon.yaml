@@ -23,7 +23,11 @@ metadata:
     - "stable"
     - "beta"
     - "canary"
-resources: []
+resources:
+  - logicalName: "postgres"
+    resourceType: "postgres"
+    purpose: "Primary application database"
+    required: true
 telemetry:
   serviceName: "audomatick-desktop"
   tracingEnabled: true
