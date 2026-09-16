@@ -24,8 +24,9 @@ metadata:
     - "beta"
     - "canary"
 resources:
-  - logicalName: "postgres"
-    resourceType: "postgres"
+  - logicalName: "primary-database"
+    resourceType: "database"
+    engine: "postgres"
     purpose: "Primary application database"
     required: true
 telemetry:

@@ -30,6 +30,17 @@ public sealed class AudomatickManifestTests
         Assert.Equal("/health/ready", manifest.Probes.Readiness.Path);
         Assert.Equal("/.well-known/facon", manifest.Metadata.Endpoint);
         Assert.Equal("audomatick-desktop", manifest.Telemetry.ServiceName);
+
+        Assert.Single(manifest.Resources);
+        var db = manifest.Resources[0];
+        Assert.Equal("primary-database", db.LogicalName);
+        Assert.Equal("database", db.ResourceType);
+        Assert.Equal("postgres", db.Engine);
+        Assert.True(db.Required);
+
+        Assert.Equal(2, manifest.Limits.Count);
+        Assert.Equal("audomatick.tasks.processed.daily", manifest.Limits[0].Key);
+        Assert.Equal("sessions.active", manifest.Limits[1].Key);
     }
 }
 
